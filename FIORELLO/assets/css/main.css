@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  font-family: 'Tajawal', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 50px;
+}
+
+nav img {
+  height: 25px;
+  width: 200px;
+}
+
+nav .navbar-lists {
+  width: 700px;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .navbar-lists ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+nav .navbar-lists ul li {
+  margin-right: 45px;
+}
+
+nav .navbar-lists ul li .drop-btn,
+nav .navbar-lists ul li a {
+  text-decoration: none;
+  color: #646a6a;
+}
+
+nav .navbar-lists ul li .drop-btn:hover,
+nav .navbar-lists ul li a:hover {
+  text-decoration: underline;
+}
+
+nav .navbar-lists ul .dropdown {
+  max-width: 400px;
+}
+
+nav .navbar-lists ul .dropdown .drop-btn {
+  border: none;
+  background-color: white;
+}
+
+nav .navbar-lists ul .dropdown .dropdown-content {
+  display: none;
+  z-index: 1;
+  position: absolute;
+}
+
+nav .navbar-lists ul .dropdown .dropdown-content a {
+  display: block;
+  position: relative;
+}
+
+nav .navbar-lists ul .dropdown .underline:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25 ease-out;
+  transition: -webkit-transform 0.25 ease-out;
+  transition: transform 0.25 ease-out;
+  transition: transform 0.25 ease-out, -webkit-transform 0.25 ease-out;
+  background-color: #646a6a;
+}
+
+nav .navbar-lists ul .dropdown .underline:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+nav .navbar-lists ul .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav .navbar-lists .end-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .navbar-lists .end-options span {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    font-family: 'Tajawal', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    img {
+        height: 25px;
+        width: 200px;
+    }
+    .navbar-lists {
+        width: 700px;
+        padding: 8px;
+        display: flex;
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+
+            li {
+                margin-right: 45px;
+
+                .drop-btn,
+                a {
+                    text-decoration: none;
+                    color: $primary-color;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .dropdown {
+                max-width: 400px;
+                .drop-btn {
+                    border: none;
+                    background-color: white;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    z-index: 1;
+                    position: absolute;
+                    a{
+                        display: block;
+                        position: relative;
+                        
+                    }
+                }
+                .underline:after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    transform-origin: bottom right;
+                    transition: transform 0.25 ease-out;
+                    background-color: $primary-color;
+                }
+                .underline:hover:after{
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+
+                }
+                &:hover{
+                    .dropdown-content{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .end-options {
+            display: flex;
+            span {
+                margin: 0px 10px;
+                cursor: pointer;
+                // .count-into-bag{
+                //     width: 1px;
+                //     height: 1px;
+                //     position: absolute;
+                // }
+            }
+        }
+    }
+}
